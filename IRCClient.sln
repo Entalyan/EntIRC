@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntIRC", "EntIRC\EntIRC.csproj", "{4CAE549C-24A4-439D-9993-F49FD9BC64ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntIRCGUI", "EntIRCGUI\EntIRCGUI.csproj", "{4B9A5623-AB8A-4842-89B5-F5FF7A9D6AB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		Description = IRC Client Library and GUIs for Windows 8 and Windows Phone 8
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CAE549C-24A4-439D-9993-F49FD9BC64ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CAE549C-24A4-439D-9993-F49FD9BC64ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CAE549C-24A4-439D-9993-F49FD9BC64ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4CAE549C-24A4-439D-9993-F49FD9BC64ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CAE549C-24A4-439D-9993-F49FD9BC64ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CAE549C-24A4-439D-9993-F49FD9BC64ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{4B9A5623-AB8A-4842-89B5-F5FF7A9D6AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B9A5623-AB8A-4842-89B5-F5FF7A9D6AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B9A5623-AB8A-4842-89B5-F5FF7A9D6AB1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4B9A5623-AB8A-4842-89B5-F5FF7A9D6AB1}.Debug|x86.Build.0 = Debug|Any CPU
+		{4B9A5623-AB8A-4842-89B5-F5FF7A9D6AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B9A5623-AB8A-4842-89B5-F5FF7A9D6AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B9A5623-AB8A-4842-89B5-F5FF7A9D6AB1}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+Assumptions:
+- An IRC message is always transmitted as a string with a maximum length of 500 characters
+- An IRC message can originate from the IRC server (Inbound) or from the user (Outbound)
+- Inbound and outbound messages need to be parsed to determine the correct handling
+	- Outbound messages can be commands (e.g. JOIN or KICK) or channel messages (e.g. PRIVMSG)
+	- Inbound messages can be commands to the client (e.g. PING solicits a PONG response without user intervention) or a channel message (which needs to be printed in the correct channel window)
+	- A response without user intervention can skip parsing for identification purposes, because the intended message type is already known
+- Outbound commands sent from UI are identified by starting with a "/" (slash), for example: /JOIN or /KICK
+	
+Outbound data flow:
+- User types a message and presses send
+- UI identifies if message is a command or a channel message. In case of the latter, the target is identified.
+- Message is passed to the method dealing with that specific type of message. IRCClient exposes methods like SendJoin, SendKick and SendChatMessage.
+
+Inbound data flow:
+- An inbound message is received from the server (RawMessageReceived event is triggered)
+- The message payload is parsed and identified
+- The appropriate handler is called
+- The handler will raise an event if the UI needs to be updated/notified
