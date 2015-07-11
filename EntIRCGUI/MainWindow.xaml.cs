@@ -25,13 +25,6 @@ namespace Entalyan.EntIRCGUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        //Some values to use while the settings system has not been implemented
-        private const string NICKNAME = "";
-        private const string USERNAME = "";
-        private const string PASSWORD = "";
-        private const string REALNAME = "Custom IRC Client Tester";
-        private const string SERVER_IP = "";
-        private const int SERVER_PORT = 0;
 
         private IrcClient client;
 
