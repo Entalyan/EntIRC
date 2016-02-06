@@ -33,12 +33,11 @@ namespace Entalyan.EntIRCGUI
             InitializeComponent();
 
             //Set up the required variables
-            client = new IrcClient();
+            var user = new IrcUser(NICKNAME, USERNAME, PASSWORD, REALNAME);
+            client = new IrcClient(user, SERVERHOSTNAME, SERVERPORT, USE_SSL, IGNORE_INVALID_SSL);
 
             //Connect event handlers
             client.MessageReceived += HandleIncomingMessage;
-
-
 
         }
 
@@ -46,12 +45,10 @@ namespace Entalyan.EntIRCGUI
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            //TODO: This needs a better solution. User needs to be maintained in the IrcClient, not the UI.
-            var user = new IrcUser(NICKNAME, USERNAME, PASSWORD, REALNAME, SERVER_IP, SERVER_PORT);
 
             try
             {
-                await client.ConnectAsync(user);
+                await client.ConnectAsync();
             }
             catch (Exception ex)
             {

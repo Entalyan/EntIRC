@@ -19,8 +19,6 @@ namespace Entalyan.EntIRC
         private string userValue = string.Empty;
         private string passValue = string.Empty;
         private string realValue = string.Empty;
-        private string ipValue = string.Empty;
-        private int portValue;
 
         #endregion
 
@@ -30,8 +28,6 @@ namespace Entalyan.EntIRC
         public string UserName { get { return userValue; } }
         public string Password { get { return passValue; } }
         public string RealName { get { return realValue; } }
-        public string HostAddress { get { return ipValue; } }
-        public int HostPort { get { return portValue; } }
 
         #endregion
 
@@ -44,14 +40,12 @@ namespace Entalyan.EntIRC
         /// <param name="userName">The users username.</param>
         /// <param name="passWord">The users password.</param>
         /// <param name="realName">The users real name.</param>
-        public IrcUser(string nickname, string userName, string password, string realName, string hostAddress, int hostPort)
+        public IrcUser(string nickname, string userName, string password, string realName)
         {
             this.nickValue = nickname;
             this.userValue = userName;
             this.passValue = password;
             this.realValue = realName;
-            this.ipValue = hostAddress;
-            this.portValue = hostPort;
         }
 
         #endregion
